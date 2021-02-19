@@ -1,0 +1,17 @@
+{
+  "name": "bybirds",
+  "version": "1.0.0",
+  "description": "bird app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "express-handlebars": "5.2.1",
+    "source-mapping-url": "^0.0.4"
+  },
+  "author": "Kristopher Keene",
+  "license": "ISC"
+}

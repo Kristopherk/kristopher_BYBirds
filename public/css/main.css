@@ -1,0 +1,106 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 5rem;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(300px, 1fr) [auto-fit];
+      grid-template-columns: minmax(300px, 1fr) [auto-fit];
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+main .card {
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  margin: 10px;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+main .card img {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+main .card .info {
+  grid-row: 4/-1;
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+img, .info, button {
+  grid-row: 1/-1;
+}
+
+.dropdown-text {
+  display: none;
+  top: 15px;
+  left: 5px;
+  right: 10px;
+  background-color: #e0dede;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(80, 30, 226, 0.9);
+          box-shadow: 0px 8px 16px 0px rgba(80, 30, 226, 0.9);
+  padding: 12px 16px;
+  color: black;
+}
+
+.info:hover .dropdown-text {
+  display: block;
+  width: 250px;
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.6);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 50px;
+  border-radius: 0px;
+  position: relative;
+  font-size: 16px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.musicButton:hover {
+  -webkit-box-shadow: 0px 0px 8px 8px rgba(80, 30, 226, 0.9);
+          box-shadow: 0px 0px 8px 8px rgba(80, 30, 226, 0.9);
+  margin-top: 5px;
+}
+
+ul {
+  margin-left: -25px;
+  font-style: italic;
+}
